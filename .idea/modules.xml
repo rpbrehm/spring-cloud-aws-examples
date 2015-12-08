@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-aws-examples.iml" filepath="$PROJECT_DIR$/spring-cloud-aws-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sqs-sns/sqs-sns.iml" filepath="$PROJECT_DIR$/sqs-sns/sqs-sns.iml" />
+    </modules>
+  </component>
+</project>
