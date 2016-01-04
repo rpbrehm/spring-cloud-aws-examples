@@ -2,7 +2,7 @@ version 'unspecified'
 
 buildscript {
     repositories {
-        mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.0.RELEASE")
@@ -32,16 +32,15 @@ project.ext {
 }
 
 repositories {
-    mavenCentral()
-    maven { url "https://repo.spring.io/snapshot" }
-    maven { url "https://repo.spring.io/milestone" }
-    maven { url "https://repo.spring.io/release" }
+    jcenter()
 }
 
 dependencies {
+    compile("com.3pillarglobal.labs:spring-integration-aws:2.0.0")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-freemarker")
-    compile 'org.springframework.cloud:spring-cloud-starter-aws'
+    compile("org.springframework.cloud:spring-cloud-starter-aws")
     compile("commons-io:commons-io:2.4")
 }
 

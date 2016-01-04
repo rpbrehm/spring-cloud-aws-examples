@@ -18,6 +18,7 @@ package com.mycompany;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.boot.context.embedded.MimeMappings;
@@ -28,6 +29,7 @@ import org.springframework.cache.concurrent.ConcurrentMapCache;
 import org.springframework.cache.support.SimpleCacheManager;
 import org.springframework.cloud.aws.autoconfigure.cache.ElastiCacheAutoConfiguration;
 import org.springframework.cloud.aws.cache.config.annotation.EnableElastiCache;
+import org.springframework.cloud.aws.context.config.annotation.EnableContextCredentials;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -39,7 +41,9 @@ import java.util.List;
 /**
  * @author Alain Sahli
  */
+@SpringBootApplication
 @EnableAutoConfiguration(exclude = ElastiCacheAutoConfiguration.class)
+@EnableContextCredentials
 @Configuration
 @ComponentScan
 public class MainApplication implements EmbeddedServletContainerCustomizer {
